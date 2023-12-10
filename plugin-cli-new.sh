@@ -56,14 +56,14 @@ delete_plugin() {
 update_plugin() {
     # Hiển thị danh sách plugin
     wp plugin list --allow-root | awk 'NR > 2 {print $1}'
-    # Nhập tên plugin cần xoá
-    read -p "Nhập tên plugin cần update: " plugin_name
+    # Nhập tên plugin cần update_plugin
+    read -p "Nhập tên plugin cần update: " plugin_update
     # Kiểm tra xem plugin có tồn tại không
-    if wp plugin list --allow-root | grep -q "$plugin_name"; then
-        wp plugin update "$plugin_name" --allow-root
-        echo "Đã update plugin $plugin_name thành công."
+    if wp plugin list --allow-root | grep -q "$plugin_update"; then
+        wp plugin update "$plugin_update" --allow-root
+        echo "Đã update plugin $plugin_update thành công."
     else
-        echo "Không tìm thấy plugin $plugin_name."
+        echo "Không tìm thấy plugin $plugin_update."
     fi
 }
 #ham update all plugin
