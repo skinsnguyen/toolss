@@ -2,7 +2,21 @@
 pwdd=`pwd`
 # Mảng chứa danh sách các plugin
 # "") install_and_activate_plugin "";;
-plugins=("WP Rocket" "iThemes Security Pro" "WPMU Dev Dashboard" "SEO by Rank Math Pro" "Elementskit" "sitepress-multilingual" "seedprod" "wp-staging" "astra-child" "astra.4.0.2" "astra-addon-plugin" "astra-premium-sites" "migration-unlimited-extension" "all-in-one-wp-migration")
+plugins=("WP Rocket"
+"iThemes Security Pro"
+"WPMU Dev Dashboard"
+"SEO by Rank Math Pro"
+"Elementskit"
+"sitepress-multilingual"
+"seedprod"
+"wp-staging"
+"astra-child"
+"astra.4.0.2"
+"astra-addon-plugin"
+"astra-premium-sites"
+"migration-unlimited-extension"
+"all-in-one-wp-migration"
+"Danh sách các plugin đã cài đặt")
 
 # Hàm cài đặt và kích hoạt plugin
 install_and_activate_plugin() {
