@@ -20,7 +20,7 @@ plugins=("WP Rocket"
 "Xoá plugin"
 "update-plugin"
 "update all plugin"
-"Show all Theme"
+"Show list Theme"
 "Thoát")
 
 # Hàm cài đặt và kích hoạt plugin
@@ -67,12 +67,13 @@ update_plugin() {
         echo "Không tìm thấy plugin $plugin_update."
     fi
 }
-#ham update all plugin
+
+#Hàm update all plugin
 update_all_plugin() {
 wp plugin update --all --allow-root
 }
-#Hàm Hiện Show Theme.
 
+#Hàm Hiện Show Theme.
 show_theme_list() {
 wp theme list --allow-root
 }
@@ -100,7 +101,7 @@ while true; do
             "Xoá plugin") delete_plugin ;;
             "update-plugin") update_plugin ;;
             "update all plugin") update_all_plugin ;;
-            "Show list Theme") show_theme_list() ;;
+            "Show list Theme") show_theme_list ;;
             "Thoát") echo "Thoát chương trình.";
             rm -f ${pwdd}/plugin-cli-new.sh;
             exit ;;
