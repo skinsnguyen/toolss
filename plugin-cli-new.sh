@@ -18,6 +18,8 @@ plugins=("WP Rocket"
 "all-in-one-wp-migration"
 "Danh sách các plugin đã cài đặt"
 "Xoá plugin"
+"update-plugin"
+"update all plugin"
 "Thoát")
 
 # Hàm cài đặt và kích hoạt plugin
@@ -50,6 +52,24 @@ delete_plugin() {
         echo "Không tìm thấy plugin $plugin_name."
     fi
 }
+# Hàm update plugin
+update_plugin() {
+    # Hiển thị danh sách plugin
+    wp plugin list --allow-root | awk 'NR > 2 {print $1}'
+    # Nhập tên plugin cần xoá
+    read -p "Nhập tên plugin cần update: " plugin_name
+    # Kiểm tra xem plugin có tồn tại không
+    if wp plugin list --allow-root | grep -q "$plugin_name"; then
+        wp plugin update "$plugin_name" --allow-root
+        echo "Đã update plugin $plugin_name thành công."
+    else
+        echo "Không tìm thấy plugin $plugin_name."
+    fi
+}
+#ham update all plugin
+update_all_plugin() {
+wp plugin update --all --allow-root
+}
 
 while true; do
     # Hiển thị menu chọn lựa
@@ -72,6 +92,8 @@ while true; do
             "all-in-one-wp-migration") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration.zip";;
             "Danh sách các plugin đã cài đặt") display_installed_plugins ;;
             "Xoá plugin") delete_plugin ;;
+            "update-plugin") update_plugin ;;
+            "update all plugin" update_all_plugin ;;
             "Thoát") echo "Thoát chương trình.";
             rm -f ${pwdd}/plugin-cli-new.sh;
             exit ;;
