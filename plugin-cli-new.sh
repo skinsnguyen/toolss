@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 pwdd=`pwd`
 # Mảng chứa danh sách các plugin
 # "") install_and_activate_plugin "";;
-plugins=("WP Rocket"
+plugins=('WP Rocket'
 "iThemes Security Pro"
 "WPMU Dev Dashboard"
 "SEO by Rank Math Pro"
