@@ -16,7 +16,10 @@ plugins=("WP Rocket"
 "astra-premium-sites"
 "migration-unlimited-extension"
 "all-in-one-wp-migration"
-"Danh sách các plugin đã cài đặt")
+"Danh sách các plugin đã cài đặt"
+"Hiện danh sách plugin"
+"Xoá plugin"
+"Thoát")
 
 # Hàm cài đặt và kích hoạt plugin
 install_and_activate_plugin() {
@@ -69,7 +72,9 @@ while true; do
             "migration-unlimited-extension") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration-unlimited-extension.zip";;
             "all-in-one-wp-migration") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration.zip";;
             "Danh sách các plugin đã cài đặt") display_installed_plugins ;;
-            "0") echo "Thoát chương trình."; exit ;;
+            "Xoá plugin") delete_plugin ;;
+            "Thoát") echo "Thoát chương trình."; exit ;;
+            #"Thoat") echo "Thoát chương trình."; exit ;;
             *) echo "Lựa chọn không hợp lệ. Hãy chọn lại." ;;
         esac
         break
