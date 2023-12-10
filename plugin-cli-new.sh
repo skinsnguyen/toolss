@@ -17,7 +17,6 @@ plugins=("WP Rocket"
 "migration-unlimited-extension"
 "all-in-one-wp-migration"
 "Danh sách các plugin đã cài đặt"
-"Hiện danh sách plugin"
 "Xoá plugin"
 "Thoát")
 
