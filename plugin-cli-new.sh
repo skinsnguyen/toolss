@@ -1,4 +1,7 @@
 #!/bin/bash
+## Nam-Nguyen
+## 10/12/2023
+
 pwdd=`pwd`
 # Mảng chứa danh sách các plugin
 # "") install_and_activate_plugin "";;
