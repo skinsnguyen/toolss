@@ -1,32 +1,37 @@
 #!/bin/bash
 ## Nam-Nguyen
 ## 10/12/2023
-
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
 pwdd=`pwd`
 # Mảng chứa danh sách các plugin
 # "") install_and_activate_plugin "";;
-plugins=("WP Rocket"
-"iThemes Security Pro"
-"WPMU Dev Dashboard"
-"SEO by Rank Math Pro"
-"Elementskit"
-"sitepress-multilingual"
-"seedprod"
-"wp-staging"
-"astra-child"
-"astra.4.0.2"
-"astra-addon-plugin"
-"astra-premium-sites"
-"migration-unlimited-extension"
-"all-in-one-wp-migration"
-"Danh sách các plugin đã cài đặt"
-"Disable all plugin"
-"Enable all plugin"
-"Xoá plugin"
-"update-plugin"
-"update all plugin"
-"Show list Theme"
-"Thoát")
+plugins=(
+    "${YELLOW}WP Rocket${NC}"
+    "${YELLOW}iThemes Security Pro${NC}"
+    "${YELLOW}WPMU Dev Dashboard${NC}"
+    "${YELLOW}SEO by Rank Math Pro${NC}"
+    "${YELLOW}Elementskit${NC}"
+    "${YELLOW}sitepress-multilingual${NC}"
+    "${YELLOW}seedprod${NC}"
+    "${YELLOW}wp-staging${NC}"
+    "${YELLOW}astra-child${NC}"
+    "${YELLOW}astra.4.0.2${NC}"
+    "${YELLOW}astra-addon-plugin${NC}"
+    "${YELLOW}astra-premium-sites${NC}"
+    "${YELLOW}migration-unlimited-extension${NC}"
+    "${YELLOW}all-in-one-wp-migration${NC}"
+    "${YELLOW}Danh sách các plugin đã cài đặt${NC}"
+    "${YELLOW}Disable all plugin${NC}"
+    "${YELLOW}Enable all plugin${NC}"
+    "${YELLOW}Xoá plugin${NC}"
+    "${YELLOW}update-plugin${NC}"
+    "${YELLOW}update all plugin${NC}"
+    "${YELLOW}Show list Theme${NC}"
+    "${RED}Thoát${NC}"
+)
 
 # Hàm cài đặt và kích hoạt plugin
 install_and_activate_plugin() {
