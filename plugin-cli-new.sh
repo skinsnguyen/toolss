@@ -1,5 +1,5 @@
 #!/bin/bash
-
+pwdd=`pwd`
 # Mảng chứa danh sách các plugin
 # "") install_and_activate_plugin "";;
 plugins=("WP Rocket" "iThemes Security Pro" "WPMU Dev Dashboard" "SEO by Rank Math Pro" "Elementskit" "sitepress-multilingual" "seedprod" "wp-staging" "astra-child" "astra.4.0.2" "astra-addon-plugin" "astra-premium-sites" "migration-unlimited-extension" "all-in-one-wp-migration")
@@ -35,3 +35,4 @@ while true; do
         break
     done
 done
+rm -f ${pwdd}/plugin-cli-new.sh
