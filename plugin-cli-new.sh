@@ -108,7 +108,7 @@ while true; do
             "all-in-one-wp-migration") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration.zip";;
             "Danh sách các plugin đã cài đặt") display_installed_plugins ;;
             "Disable all plugin") disable_all_plugin ;;
-            "Enable all plugin" enable_all_plugin ;;
+            "Enable all plugin") enable_all_plugin ;;
             "Xoá plugin") delete_plugin ;;
             "update-plugin") update_plugin ;;
             "update all plugin") update_all_plugin ;;
