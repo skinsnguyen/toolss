@@ -3,6 +3,7 @@
 #Description: Check Linux Login History
 # Nam-Nguyen
 #12/11/2023
+pwdd=`pwd`
 AUTHLOG=/var/log/secure
 
 if [[ -n $1 ]];
@@ -79,3 +80,4 @@ done
 
 rm -f $FAILED_LOG
 rm -f $SUCCESS_LOG
+rm -f ${pwdd}/login-history.sh
