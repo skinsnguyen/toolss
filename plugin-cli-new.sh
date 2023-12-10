@@ -9,6 +9,12 @@ install_and_activate_plugin() {
     plugin_url=$1
     wp plugin install "$plugin_url" --activate --allow-root
 }
+# Hàm cài đặt và kích hoạt Theme
+install_and_activate_theme() {
+    plugin_url=$1
+    wp theme install "$plugin_url" --activate --allow-root
+}
+
 
 while true; do
     # Hiển thị menu chọn lựa
@@ -23,8 +29,8 @@ while true; do
             "sitepress-multilingual") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/sitepress-multilingual-cms.4.5.5.zip";;
             "seedprod") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/seedprod.zip";;
             "wp-staging") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/wp-staging-pro.zip";;
-            "astra-child") install_and_activate_plugin "https://tool.kienthuclinux.info/theme/astra-child.zip";;
-            "astra.4.0.2") install_and_activate_plugin "https://tool.kienthuclinux.info/theme/astra.4.0.2.zip";;
+            "astra-child") install_and_activate_theme "https://tool.kienthuclinux.info/theme/astra-child.zip";;
+            "astra.4.0.2") install_and_activate_theme "https://tool.kienthuclinux.info/theme/astra.4.0.2.zip";;
             "astra-addon-plugin") install_and_activate_plugin "https://tool.kienthuclinux.info/theme/astra-addon-plugin-4.0.1.zip";;
             "astra-premium-sites") install_and_activate_plugin "https://tool.kienthuclinux.info/theme/astra-premium-sites-3.1.24.zip";;
             "migration-unlimited-extension") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration-unlimited-extension.zip";;
