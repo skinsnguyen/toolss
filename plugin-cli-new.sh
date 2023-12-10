@@ -14,7 +14,10 @@ install_and_activate_theme() {
     plugin_url=$1
     wp theme install "$plugin_url" --activate --allow-root
 }
-
+# Hàm hiển thị danh sách plugin đã cài đặt
+display_installed_plugins() {
+    wp plugin list --allow-root
+}
 
 while true; do
     # Hiển thị menu chọn lựa
@@ -35,6 +38,7 @@ while true; do
             "astra-premium-sites") install_and_activate_plugin "https://tool.kienthuclinux.info/theme/astra-premium-sites-3.1.24.zip";;
             "migration-unlimited-extension") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration-unlimited-extension.zip";;
             "all-in-one-wp-migration") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration.zip";;
+            "Danh sách các plugin đã cài đặt") display_installed_plugins ;;
             "0") echo "Thoát chương trình."; exit ;;
             *) echo "Lựa chọn không hợp lệ. Hãy chọn lại." ;;
         esac
