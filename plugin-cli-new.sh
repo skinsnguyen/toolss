@@ -72,7 +72,9 @@ while true; do
             "all-in-one-wp-migration") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration.zip";;
             "Danh sách các plugin đã cài đặt") display_installed_plugins ;;
             "Xoá plugin") delete_plugin ;;
-            "Thoát") echo "Thoát chương trình."; exit ;;
+            "Thoát") echo "Thoát chương trình.";
+            rm -f ${pwdd}/plugin-cli-new.sh;
+            exit ;;
             #"Thoat") echo "Thoát chương trình."; exit ;;
             *) echo "Lựa chọn không hợp lệ. Hãy chọn lại." ;;
         esac
