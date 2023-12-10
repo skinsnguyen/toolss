@@ -93,7 +93,7 @@ while true; do
             "Danh sách các plugin đã cài đặt") display_installed_plugins ;;
             "Xoá plugin") delete_plugin ;;
             "update-plugin") update_plugin ;;
-            "update all plugin" update_all_plugin ;;
+            "update all plugin") update_all_plugin ;;
             "Thoát") echo "Thoát chương trình.";
             rm -f ${pwdd}/plugin-cli-new.sh;
             exit ;;
