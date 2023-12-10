@@ -18,6 +18,7 @@ plugins=("WP Rocket"
 "all-in-one-wp-migration"
 "Danh sách các plugin đã cài đặt"
 "Disable all plugin"
+"Enable all plugin"
 "Xoá plugin"
 "update-plugin"
 "update all plugin"
@@ -42,7 +43,10 @@ display_installed_plugins() {
 disable_all_plugin() {
 wp plugin deactivate --all --allow-root
 }
-
+# Hàm Enable all plugin alll plugin
+enable_all_plugin() {
+wp plugin activate --all --allow-root
+}
 # Hàm xoá plugin
 delete_plugin() {
     # Hiển thị danh sách plugin
@@ -104,6 +108,7 @@ while true; do
             "all-in-one-wp-migration") install_and_activate_plugin "https://tool.kienthuclinux.info/plugin/all-in-one-wp-migration.zip";;
             "Danh sách các plugin đã cài đặt") display_installed_plugins ;;
             "Disable all plugin") disable_all_plugin ;;
+            "Enable all plugin" ;;
             "Xoá plugin") delete_plugin ;;
             "update-plugin") update_plugin ;;
             "update all plugin") update_all_plugin ;;
