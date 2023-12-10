@@ -33,6 +33,22 @@ display_installed_plugins() {
     wp plugin list --allow-root
 }
 
+# Hàm xoá plugin
+delete_plugin() {
+    # Hiển thị danh sách plugin
+    wp plugin list --allow-root | awk 'NR > 2 {print $1}'
+    # Nhập tên plugin cần xoá
+    read -p "Nhập tên plugin cần xoá: " plugin_name
+    # Kiểm tra xem plugin có tồn tại không
+    if wp plugin list --allow-root | grep -q "$plugin_name"; then
+        wp plugin deactivate "$plugin_name" --allow-root
+        wp plugin delete "$plugin_name" --allow-root
+        echo "Đã xoá plugin $plugin_name thành công."
+    else
+        echo "Không tìm thấy plugin $plugin_name."
+    fi
+}
+
 while true; do
     # Hiển thị menu chọn lựa
     PS3="Chọn plugin để cài đặt (hoặc 0 để thoát): "
