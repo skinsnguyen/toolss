@@ -2,6 +2,7 @@
 ## Nam-Nguyen
 ## 24/10/2023
 # Initialize a total memory variable
+pwdd=`pwd`
 total_memory=0
 
 # Use ps to list all running processes, exclude the header, and calculate memory usage for each service in MB
@@ -20,3 +21,4 @@ END {
     }
     printf "%-30s %.2f MB\n", "Total Memory Usage:", total_memory;
 }' | sort -k2,2nr
+rm -f ${pwdd}/calc-ram.sh
