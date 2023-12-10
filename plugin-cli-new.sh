@@ -128,4 +128,3 @@ while true; do
         break
     done
 done
-rm -f ${pwdd}/plugin-cli-new.sh
