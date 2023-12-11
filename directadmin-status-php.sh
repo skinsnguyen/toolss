@@ -17,6 +17,11 @@ select opt in "${options[@]}"; do
             for i in $(ls "$directory" | grep 'php[0-9]*'); do
                 version=$(echo ${i} | grep -o '[0-9]*')
                 systemctl restart php-fpm${version}
+                if [ $? -eq 0 ]; then
+                    echo "Successfully restarted php-fpm${version}."
+                else
+                    echo "Failed to restart php-fpm${version}."
+                fi
             done
             ;;
         "Check Status")
