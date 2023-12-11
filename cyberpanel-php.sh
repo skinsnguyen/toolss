@@ -1,4 +1,6 @@
 #!/bin/bash
+# Nam-Nguyen
+# 12/12/2023
 # Tăng các thống ở configurations all tất php
 lsws_path="/usr/local/lsws"
 if [ -d "${lsws_path}" ]; then
