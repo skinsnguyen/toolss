@@ -16,12 +16,12 @@ if [ -d "${directory}" ]; then
 
     for i in $(ls "${directory}" | grep 'php*'); do
         php_d_path="${directory}/${i}/lib/php.conf.d"
-        nam_ini_file="${php_d_path}/nam.ini"
+        nam_ini_file="${php_d_path}/namnh.ini"
 
         echo "Adding configurations to ${nam_ini_file}"
         
         # Thêm cấu hình mà không kiểm tra xem file có tồn tại hay không
-        echo "${configurations}" >> "${nam_ini_file}"
+        echo "${configurations}" > "${nam_ini_file}"
         echo "Configurations added to ${nam_ini_file}"
     done
 else
