@@ -14,7 +14,7 @@ cat << "EOF"
 EOF
 echo "! kich hoat ssl cyberpanel !"
 read -p "Nhap domain kich hoat ssl : " domain
-wget -O - https://get.acme.sh | sh
+wget -O - https://get.acme.sh --no-check-certificate| sh
 /root/.acme.sh/acme.sh --register-account -m ${domain}@gmail.com
 /root/.acme.sh/acme.sh --issue -d ${domain} -d www.${domain} --cert-file /etc/letsencrypt/live/${domain}/cert.pem --key-file /etc/letsencrypt/live/${domain}/privkey.pem --fullchain-file /etc/letsencrypt/live/${domain}/fullchain.pem -w /home/${domain}/public_html --force
 rm -f ${pwdd}/ssl-cyberpanel.sh
