@@ -4,7 +4,7 @@
 # Tăng các thống ở configurations all tất php
 
 lsws_path="/usr/local/lsws"
-timess=$(date +"%F")
+timess=$(date +"%Hh-%Mp-%F")
 if [ -d "${lsws_path}" ]; then
     configurations="
     max_execution_time=100
