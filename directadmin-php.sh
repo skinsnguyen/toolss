@@ -1,6 +1,7 @@
 #!/bin/bash
 # Nam-Nguyen
 # 12/12/2023
+#Tăng các thống ở configurations all tất php
 directory="/usr/local"
 timess=$(date +"%F")
 # Kiểm tra xem thư mục có tồn tại hay không
