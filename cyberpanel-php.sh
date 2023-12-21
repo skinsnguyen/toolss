@@ -2,7 +2,9 @@
 # Nam-Nguyen
 # 12/12/2023
 # Tăng các thống ở configurations all tất php
+
 lsws_path="/usr/local/lsws"
+timess=$(date +"%F")
 if [ -d "${lsws_path}" ]; then
     configurations="
     max_execution_time=100
@@ -14,7 +16,7 @@ if [ -d "${lsws_path}" ]; then
     "
 for i in $(ls "${lsws_path}" | grep 'lsphp*'); do
         php_d_path="${lsws_path}/${i}/etc/php.d"
-        nam_ini_file="${php_d_path}/namnh-az.ini"
+        nam_ini_file="${php_d_path}/namnh-${timess}.ini"
 
         echo "Adding configurations to ${nam_ini_file}"
 
