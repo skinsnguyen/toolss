@@ -2,7 +2,7 @@
 # Nam-Nguyen
 # 12/12/2023
 directory="/usr/local"
-
+timess=$(date +"%F")
 # Kiểm tra xem thư mục có tồn tại hay không
 if [ -d "${directory}" ]; then
     configurations="
@@ -16,7 +16,7 @@ if [ -d "${directory}" ]; then
 
     for i in $(ls "${directory}" | grep 'php*'); do
         php_d_path="${directory}/${i}/lib/php.conf.d"
-        nam_ini_file="${php_d_path}/namnh.ini"
+        nam_ini_file="${php_d_path}/namnh-${timess}.ini"
 
         echo "Adding configurations to ${nam_ini_file}"
         
