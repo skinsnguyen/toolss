@@ -9,4 +9,4 @@ echo -e "\033[31m                           |___/                               
 echo -e "\033[31m ===================================================================\033[0m"
 
 echo "                RAM  usage : $(free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }')                         "
-echo "                Disk usage : $(df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5}')
+echo "                Disk usage : $(df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5}')                         "
