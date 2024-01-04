@@ -1,7 +1,7 @@
 #!/bin/bash
-# Author: Quach Chi Cuong
-# Email: cuongquach.community@gmail.com
-# Blog: https://cuongquach.com/
+# Author: Hoang-Nam
+# date: 04/01/2024
+
 
 # Global variable
 OS_DISTRO="unknown"
