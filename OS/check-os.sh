@@ -2,6 +2,7 @@
 # Author: Hoang-Nam
 # date: 04/01/2024
 
+## check user: root
 
 # Global variable
 OS_DISTRO="unknown"
